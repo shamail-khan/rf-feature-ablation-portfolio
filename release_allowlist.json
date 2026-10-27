@@ -1,0 +1,24 @@
+{
+  "purpose": "Explicit code-only release allowlist; no research data or derived artifacts.",
+  "files": [
+    ".gitattributes",
+    ".gitignore",
+    "LICENSES/CleanRL.txt",
+    "README.md",
+    "THIRD_PARTY_NOTICES.md",
+    "agents/__init__.py",
+    "agents/eval_mlp_sionna_ppo.py",
+    "agents/ppo_1dcnn.py",
+    "agents/ppo_mlp.py",
+    "docs/DATA_INTERFACE.md",
+    "docs/PREPARATION.md",
+    "environment.yml",
+    "envs/__init__.py",
+    "envs/register_sionna_env.py",
+    "envs/register_sionna_grid3d.py",
+    "envs/sionna_grid3d_env.py",
+    "envs/sionna_grid_env.py",
+    "release_allowlist.json",
+    "tools/check_release.py"
+  ]
+}
