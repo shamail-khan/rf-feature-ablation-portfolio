@@ -4,9 +4,9 @@ Code companion for the observation-representation experiments associated with *A
 
 This repository isolates the feature-comparison component of the research: PPO policies receive current and goal RF representations and navigate a discrete Sionna-derived environment. It complements the [thesis portfolio](https://github.com/shamail-khan/gnss-rl-portfolio).
 
-## Confidential data
+## Data requirements
 
-**No research data or data-derived artifacts are distributed.** Raw measurements, processed grids, normalization values, learned checkpoints, logs, trajectories, videos, figures, and the paper PDF are excluded. The source reads private data supplied separately by an authorized user. No download link or redistribution permission is implied.
+Training and evaluation require authorized RF datasets supplied separately. This repository distributes source code and documentation. Measurements, processed grids, normalization values, checkpoints, and generated research outputs are excluded.
 
 ## Included code
 
@@ -27,7 +27,7 @@ The 2D and 3D environments differ in actions, episode budgets, and distance shap
 
 ## Setup with authorized private data
 
-The archived `environment.yml` is provided as a starting specification, not a validated installation. Python 3.10 is specified. Install in a separate environment.
+The archived `environment.yml` specifies Python 3.10. Dependency installation has not been validated for this release. Use a separate environment when restoring the setup.
 
 Set local environment variables to private files outside this repository:
 - `RF_GRID24_PATH`: 24-cell processed grid.
@@ -42,9 +42,9 @@ From this directory, an illustrative 2D run is:
 python agents/ppo_mlp.py --env-id SionnaGrid2D-v0 --obs-mode phase_only --rep-mode 24 --total-timesteps 200000 --seed 1
 ```
 
-The command is an example, not a recovered configuration for a specific paper figure. Leave tracking disabled and do not enable video or trace capture for a public release. Training creates private local artifacts; the release allowlist excludes new files by default.
+This example illustrates the command-line interface. Exact configurations for individual paper figures are unavailable. Training outputs may contain private data. Tracking, video, and trace capture should remain disabled when preparing public files. The release allowlist excludes new files by default.
 
-## Validation and provenance
+## Validation and project history
 
 Repository preparation changed file organization and machine-specific path configuration only. The learning and feature-extraction algorithms were not redesigned. Python syntax and release contents can be checked without opening any dataset:
 
@@ -54,4 +54,4 @@ python tools/check_release.py
 
 Training, inference, dependency installation, and reproduction of paper results have not been performed for this archive. The archived evaluator is for 2D and does not expose all training settings. The latest 3D implementation is included as related experimental code; it has not been mapped to a paper figure.
 
-See [preparation notes](docs/PREPARATION.md) and [third-party notices](THIRD_PARTY_NOTICES.md). This public code-only companion is curated from a separate private code archive. Confidential research data and data-derived artifacts are not distributed.
+See the [repository notes](docs/PREPARATION.md) for source organization and known limitations, and the [third-party notices](THIRD_PARTY_NOTICES.md) for attribution and licensing.

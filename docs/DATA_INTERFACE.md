@@ -26,6 +26,6 @@ The 3D environment reads grid_obs (96, 4, 1024), grid_pos (96, 3), grid_rck (96,
 
 ## Reproducibility boundary
 
-Preprocessing and original dataset generation are not provided in this draft. A reader without authorized compatible data cannot reproduce results. The environment computes some feature normalization statistics from its loaded representatives; the correct training/evaluation split and leakage controls still need to be established for the intended experiment.
+Preprocessing and original dataset generation are excluded from this repository. A reader without authorized compatible data cannot reproduce results. The environment computes some feature normalization statistics from its loaded representatives; the correct training/evaluation split and leakage controls still need to be established for the intended experiment.
 
-Do not commit private arrays, sample records, actual normalization values, private file locations, or generated outputs.
+Private arrays, sample records, fitted normalization values, local dataset paths, and generated outputs are excluded from the public release.
